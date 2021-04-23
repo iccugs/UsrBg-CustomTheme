@@ -7,24 +7,37 @@
  * @source https://github.com/iccugs/UsrBg-CustomTheme/
  * @updateURL https://github.com/iccugs/UsrBg-CustomTheme/UsrBg-CustomTheme.theme.css
  */
-
 /*
 USRBG Custom Theme by Paradox.
 ==================================
 For others to view, they must have DevilBro's BDFDB
-plugin library installed through BetterDiscord with
-a supported theme also installed. If your current
-theme makes lots of changes to the positioning of
-the modals listed below, then try changing some of
-the variables to correct the issue.
+plugin library installed through BetterDiscord.
 */
-
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
 @import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
-
+:root {
+	--font:						Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+	--settingsicons:			1;
+	--accentcolor: 				36,0,156;
+	--accentcolor2: 			163,0,155;
+	--linkcolor: 				222,0,0;
+	--mentioncolor: 			153,0,230;
+	--textbrightest: 			0,227,61;
+	--textbrighter: 			0,199,53;
+	--textbright: 				0,166,44;
+	--textdark: 				0,138,37;
+	--textdarker: 				0,120,32;
+	--textdarkest: 				0,82,22;
+	--backgroundaccent: 		20,20,20;
+	--backgroundprimary: 		15,15,15;
+	--backgroundsecondary: 		5,5,5;
+	--backgroundsecondaryalt: 	10,10,10;
+	--backgroundtertiary: 		25,25,25;
+	--backgroundfloating: 		0,0,0;
+}
 .root-SR8cQa {
 	transform: tranlateZ(0);
 }
-
 .header-QKLPzZ .wrapper-3t9DeA::before {
 	content: '';
 	position: fixed;
@@ -34,8 +47,9 @@ the variables to correct the issue.
 	height: 100%;
 	opacity: .5;
 	pointer-events: none;
+	background: var(--user-background) center/cover no-repeat;
+	-webkit-mask: linear-gradient(black, transparent 50%);
 }
-
 .headerInfo-30uryT,
 .tabBarItem-1b8RUP,
 .activity-1ythUs {
